@@ -7,7 +7,7 @@ class AccountActivationsController < ApplicationController
 
       user.update_attribute(:activated,    true)
       user.update_attribute(:activated_at, Time.zone.now)
-       @user.send_activation_email
+       #@user.send_activation_email
       log_in user
       flash[:success] = "Account activated!"
       redirect_to user
